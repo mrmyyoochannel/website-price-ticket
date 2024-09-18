@@ -65,7 +65,7 @@ if (isset($web_record) && $web_record['web_status'] != 1) {
 }
 ?>
   <div class="card-footer text-muted">
-  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support
+  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support Create by Watikorn
   </div>
 </body>
 </html>
