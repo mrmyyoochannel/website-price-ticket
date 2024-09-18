@@ -21,15 +21,15 @@
     <div class="card-group">
   <div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
+    <img class="card-img-top" src="_img/VRChat_2024-09-16_23-35-45.796_2560x1440_Player.png" alt="Card image cap">
     <div class="card-body"></div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
+    <img class="card-img-top" src="_img/VRChat_2024-09-16_23-35-45.796_2560x1440_Player.png" alt="Card image cap">
     <div class="card-body"></div>
   </div>
   <div class="card">
-    <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
+    <img class="card-img-top" src="_img/VRChat_2024-09-16_23-35-45.796_2560x1440_Player.png" alt="Card image cap">
     <div class="card-body"></div>
   </div>
 </div>

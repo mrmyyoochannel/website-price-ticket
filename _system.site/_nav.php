@@ -42,7 +42,10 @@ $isLoggedIn = isset($_SESSION['user_id']);
         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarScrollingDropdown">
           <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="login.php">เข้าสู่ระบบ</a></li>
           <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="logout.php">ออกจากระบบ</a></li>
-          <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="#">ลงทะเบียนผู้ขาย</a></li>
+      <?php
+        if (isset($_SESSION['level']) && $_SESSION['level'] == 4) {
+            echo' <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="#">ลงทะเบียนผู้ขาย</a></li>';
+        }?>
         </ul>
       </li>
     </ul>

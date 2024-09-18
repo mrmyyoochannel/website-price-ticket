@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<html lang="th">
 <html>
 <head>
 <?php include_once('_system.site/_header.php'); ?>

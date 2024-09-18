@@ -15,24 +15,24 @@
       <div class="card-header"></div>
   <div class="card-group">
   <div class="card">
-    <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
+    <img class="card-img-top" src="_img/VRChat_2024-09-15_19-25-05.251_2560x1440.png" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">กิจกรรมภายในงาน</h5>
+      <p class="card-text">กิจกรรมภายในงาน จะมีดังนี้ (Soon...)</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="_img/VRChat_2024-09-15_22-10-43.989_2560x1440.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">สถานที่จัดงาน</h5>
+      <p class="card-text">ท่านสามารถ ดูวิธีการเดินทาง ได้ที่ <a href="?p=map">>วิธีการเดินทาง<</a></p>
     </div>
   </div>
   <div class="card">
     <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="_img/VRChat_2024-09-06_01-29-50.435_2560x1440.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">ติดต่อสอบถาม</h5>
+      <p class="card-text">ท่านสามารถ ติดต่อสอบถามได้ทาง Gmail: watikorn.tha@rmutp.ac.th</p>
     </div>
   </div>
 </div>
