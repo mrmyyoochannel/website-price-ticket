@@ -10,7 +10,8 @@ https://sweetalert2.github.io/recipe-gallery/
 <br>
 <a>------------------------------------------------</a>
 <br>
-Some page is bug....
+Some page is bug.... 
 ../_shop/buy_ticket.php?event_id=1 Only
 <br>
 [myprofile](https://myyoomi.carrd.co/)
+This Website Can get ticket login logout register editprofile .... and more
