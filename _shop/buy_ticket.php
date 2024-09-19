@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 if (!isset($_SESSION['id'])) {
     header("location: ../login.php");
@@ -128,8 +128,8 @@ if (isset($_GET['event_id'])) {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Bootstrap 5 JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-      <div class="card-footer text-center mt-4">
-  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support
+  <div class="card-footer text-muted">
+  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
   </div>
 </body>
 </html>

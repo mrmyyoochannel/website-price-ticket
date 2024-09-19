@@ -80,8 +80,8 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-      <div class="card-footer text-muted">
-  Â© 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support
+  <div class="card-footer text-muted">
+  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
   </div>
 </body>
 </html>
