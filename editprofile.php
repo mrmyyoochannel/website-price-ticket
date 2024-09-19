@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "web.setting";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+ include('_system.site/_connect.php'); 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST["id"];
@@ -52,6 +41,9 @@ if ($result->num_rows > 0) {
 $conn->close();
 ?>
 
+<?php include_once('_system.site/_nav.php'); ?>
+    <div class="card-header"></div>
+        <div class="card-header"></div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,5 +80,8 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <div class="card-footer text-muted">
+  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support
+  </div>
 </body>
 </html>
