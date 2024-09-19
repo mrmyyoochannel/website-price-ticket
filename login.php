@@ -6,8 +6,10 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
+	$user_img = $_POST["user_img"];
+	
 
-    $sql = "SELECT id, u_name, level FROM user_profile WHERE e_mail = '$email' AND p_word = '$password'";
+    $sql = "SELECT id, u_name, level, e_mail, user_img FROM user_profile WHERE e_mail = '$email' AND p_word = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -16,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['u_name'] = $row['u_name'];
         $_SESSION['level'] = $row['level'];
         $_SESSION['e_mail'] = $row['e_mail'];
+		$_SESSION['user_img'] = $row["user_img"];
+		
         header("location: ../php_home_page/");
     } else {
         $error = "Invalid email or password";

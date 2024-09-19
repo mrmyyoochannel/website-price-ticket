@@ -1,15 +1,24 @@
 <?php
- include('_system.site/_connect.php'); 
+include('_system.site/_connect.php'); 
+include_once('_system.site/_nav.php');
+
+if (!isset($_SESSION['id'])) {
+    header("Location: ../login.php");
+    exit;
+}
+
+$user_id = $_SESSION['id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST["id"];
     $u_name = $_POST["u_name"];
     $e_mail = $_POST["e_mail"];
     $user_img = $_POST["user_img"];
 
-    $sql = "UPDATE user_profile SET u_name='$u_name', e_mail='$e_mail', user_img='$user_img' WHERE id=$id";
+    $sql = "UPDATE user_profile SET u_name=?, e_mail=?, user_img=? WHERE id=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssi", $u_name, $e_mail, $user_img, $user_id);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         echo "<script>
                 Swal.fire({
                     icon: 'success',
@@ -22,15 +31,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Swal.fire({
                     icon: 'error',
                     title: 'Error',
-                    text: 'Error updating record: " . $conn->error . "'
+                    text: 'Error updating record: " . $stmt->error . "'
                 });
               </script>";
     }
+    $stmt->close();
 }
 
-$id = 1; // Example ID to edit
-$sql = "SELECT * FROM user_profile WHERE id=$id";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM user_profile WHERE id=?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -38,12 +50,9 @@ if ($result->num_rows > 0) {
     $row = null;
     echo "0 results";
 }
+$stmt->close();
 $conn->close();
 ?>
-
-<?php include_once('_system.site/_nav.php'); ?>
-    <div class="card-header"></div>
-        <div class="card-header"></div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,6 +65,10 @@ $conn->close();
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <div class="card-header"></div>
+    <div class="text-center">
+  <img src="<?php echo $row['user_img']; ?>" class="rounded" alt="<?= $_SESSION['u_name']; ?>">
+	</div>
     <div class="container">
         <h2>Edit User Profile</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">

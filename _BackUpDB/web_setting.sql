@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 11:15 AM
+-- Generation Time: Sep 19, 2024 at 03:06 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -35,6 +35,13 @@ CREATE TABLE `events` (
   `location` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `name`, `description`, `date`, `location`) VALUES
+(1, 'FurMY Thailand', 'FurMY Thailand', '2024-09-15', 'FurMY Thailand');
+
 -- --------------------------------------------------------
 
 --
@@ -44,9 +51,17 @@ CREATE TABLE `events` (
 CREATE TABLE `tickets` (
   `id` int(11) NOT NULL,
   `event_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `purchase_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `user_email` varchar(255) DEFAULT NULL,
+  `purchase_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `payment_proof` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tickets`
+--
+
+INSERT INTO `tickets` (`id`, `event_id`, `user_email`, `purchase_date`, `payment_proof`) VALUES
+(40, 1, 'yoo47000@gmail.com', '2024-09-19 09:56:21', 'uploads/1000015275.jpg');
 
 -- --------------------------------------------------------
 
@@ -83,8 +98,10 @@ CREATE TABLE `user_profile` (
 --
 
 INSERT INTO `user_profile` (`id`, `level`, `u_status`, `u_name`, `p_word`, `e_mail`, `user_img`) VALUES
-(1, 4, 0, 'MYYOOMI', '0656615598', 'yoo47000@gmail.com', 'none'),
-(6, 4, 0, 'Mochi', 'mochi2576', 'eakbadinchantawiparck@gmail.com', 'none');
+(1, 4, 0, 'MeowMYMY', '0656615598', 'yoo47000@gmail.com', 'https://myyoomi.carrd.co/assets/images/image01.png'),
+(6, 4, 0, 'Mochi', 'mochi2576', 'eakbadinchantawiparck@gmail.com', 'none'),
+(8, 1, 0, 'testuser', 'myyoomistudio@gmail.com', 'myyoomistudio@gmail.com', 'none'),
+(69, 4, 0, 'connonCH', '12345', 'connon12345@gmail.com', 'none');
 
 -- --------------------------------------------------------
 
@@ -146,19 +163,19 @@ ALTER TABLE `web_setting`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `web_setting`

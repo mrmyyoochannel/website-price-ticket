@@ -111,7 +111,7 @@ if (isset($_GET['event_id'])) {
                     <input type="hidden" name="event_id" value="<?php echo $event_id; ?>">
                     <div class="mb-3">
                         <label for="user_email" class="form-label"><i class="fas fa-envelope"></i> Gmail:</label>
-                        <input type="email" id="user_email" name="user_email" class="form-control" required>
+                        <input value="<?php echo $_SESSION['e_mail']; ?>" type="email" id="user_email" name="user_email" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="payment_proof" class="form-label"><i class="fas fa-file-upload"></i> แนบรูปแสดงการโอนเงิน(อัปโหลดไฟล์ได้ไม่เกิน 4MB):</label>

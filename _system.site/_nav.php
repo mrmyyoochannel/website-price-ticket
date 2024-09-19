@@ -47,7 +47,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
          <?php
         if (isset($_SESSION['level']) && $_SESSION['level'] >= 1) {
             echo' <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="logout.php">ออกจากระบบ</a></li>';
-            echo' <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="#">แก้ไขโปรไฟล์</a></li>';
+            echo' <li><a style="color: #ffffff;" class="dropdown-item bg-dark" href="editprofile.php">แก้ไขโปรไฟล์</a></li>';
         }?>
       <?php
         if (isset($_SESSION['level']) && $_SESSION['level'] == 4) {

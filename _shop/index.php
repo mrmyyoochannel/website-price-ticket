@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="mb-3">
                     <label for="user_email" class="form-label">Gmail:</label>
-                    <input type="email" id="user_email" name="user_email" class="form-control" required>
+                    <input value="<?php echo $_SESSION['e_mail']; ?>" type="email" id="user_email" name="user_email" class="form-control" required>
                 </div>
                 <button type="submit" class="btn btn-primary">ตรวจสอบ</button>
             </form>
@@ -196,6 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <?php if (isset($_SESSION['level']) && $_SESSION['level'] == 4) { ?>
                                 <th>หลักฐานการชำระเงิน</th>
                             <?php } ?>
+							<th>Image Profile</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -207,6 +208,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <td><img src="<?php echo $row['payment_proof']; ?>" alt="Payment Proof"
                                             style="width:200px;height:auto;"></td>
                                 <?php } ?>
+								<td><img src="<?php echo $_SESSION['user_img']; ?>" alt="<?php echo $_SESSION['u_name']; ?>"
+                                            style="width:200px;height:200px;"></td>
                             </tr>
                         <?php } ?>
                     </tbody>
