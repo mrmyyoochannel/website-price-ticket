@@ -11,7 +11,7 @@ https://sweetalert2.github.io/recipe-gallery/
 <a>------------------------------------------------</a>
 <br>
 Some page is bug.... 
-(../_shop/buy_ticket.php?event_id=1) Only
+(../_shop/buy_ticket.php?event_id=<idinsql>) Only
 <br>
 [myprofile](https://myyoomi.carrd.co/)
 <br>
