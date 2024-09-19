@@ -114,14 +114,13 @@ if (isset($_GET['event_id'])) {
                         <input type="email" id="user_email" name="user_email" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="payment_proof" class="form-label"><i class="fas fa-file-upload"></i> แนบรูปแสดงการโอนเงิน:</label>
+                        <label for="payment_proof" class="form-label"><i class="fas fa-file-upload"></i> แนบรูปแสดงการโอนเงิน(อัปโหลดไฟล์ได้ไม่เกิน 4MB):</label>
                         <input type="file" id="payment_proof" name="payment_proof" class="form-control" accept="image/*" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100"><i class="fas fa-ticket-alt"></i> ซื้อบัตร</button>
+                    <button type="submit" class="btn btn-primary w-100"><i class="fas fa-ticket-alt"></i> ซื้อบัตร</button> | <a href="../_shop/" class="btn btn-secondary mt-3 w-100"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
                 </form>
                 <?php } ?>
             </div>
-            <a href="../_shop/" class="btn btn-secondary mt-3 w-100"><i class="fas fa-arrow-left"></i> กลับหน้าหลัก</a>
         </div>
     </div>
     <!-- SweetAlert2 JavaScript -->

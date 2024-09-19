@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
-if(!isset($_SESSION['id'])) {
-    header("location: ../login.php");
+if (!isset($_SESSION['id'])) {
+    header("Location: ../login.php");
     exit;
 }
 include '../_system.site/_connect.php';
@@ -23,28 +23,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // ตรวจสอบว่าเป็นไฟล์รูปภาพจริงหรือไม่
             $check = getimagesize($payment_proof["tmp_name"]);
-            if($check !== false) {
+            if ($check !== false) {
                 $uploadOk = 1;
             } else {
-                echo "File is not an image.";
+                echo 'File is not an image. <a href="buy_ticket.php?event_id=1">Buy Ticket</a>';
                 $uploadOk = 0;
             }
 
             // ตรวจสอบขนาดไฟล์
-            if ($payment_proof["size"] > 500000) {
-                echo "Sorry, your file is too large.";
+            if ($payment_proof["size"] > 4000000) {
+                echo 'Sorry, your file is too large. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
                 $uploadOk = 0;
             }
 
             // อนุญาตเฉพาะไฟล์บางประเภท
-            if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-                echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+                echo 'Sorry, only JPG, JPEG, PNG & GIF files are allowed. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
                 $uploadOk = 0;
             }
 
             // ตรวจสอบว่า $uploadOk เป็น 0 หรือไม่
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+                echo 'Sorry, your file was not uploaded. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
             // ถ้าทุกอย่างถูกต้อง, อัปโหลดไฟล์
             } else {
                 if (move_uploaded_file($payment_proof["tmp_name"], $target_file)) {
@@ -54,22 +54,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $stmt->execute();
 
                     if ($stmt->affected_rows > 0) {
-                        echo "The file ". htmlspecialchars(basename($payment_proof["name"])). " has been uploaded.";
+                        echo 'The file ' . htmlspecialchars(basename($payment_proof["name"])) . ' has been uploaded. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
+                        header('Location: '.$uri.'/php_home_page/_shop');
                     } else {
-                        echo "Error: " . $stmt->error;
+                        echo 'Error: ' . $stmt->error;
                     }
                     $stmt->close();
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    echo 'Sorry, there was an error uploading your file. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
                 }
             }
         } else {
-            echo "User email or payment proof is empty.";
+            echo 'User email or payment proof is empty. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
         }
     } else {
-        echo "User email or payment proof is not set.";
+        echo 'User email or payment proof is not set. <a class="nav-link" href="buy_ticket.php?event_id=1">Buy Ticket</a>';
     }
 }
-	header('Location: '.$uri.'/php_home_page/_shop');
-	exit;
 ?>

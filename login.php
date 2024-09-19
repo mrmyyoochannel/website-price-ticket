@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
                         </form>
-                        <a href="register.php">สมัคสมาชิค</a>
+                        <a href="register.php">สมัคสมาชิก</a>
                         <?php if(isset($error)) { ?>
                             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                             <script>
