@@ -39,8 +39,6 @@ CREATE TABLE `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `name`, `description`, `date`, `location`) VALUES
-(1, 'FurMY Thailand', 'FurMY Thailand', '2024-09-15', 'FurMY Thailand');
 
 -- --------------------------------------------------------
 
@@ -55,13 +53,6 @@ CREATE TABLE `tickets` (
   `purchase_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `payment_proof` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tickets`
---
-
-INSERT INTO `tickets` (`id`, `event_id`, `user_email`, `purchase_date`, `payment_proof`) VALUES
-(40, 1, 'yoo47000@gmail.com', '2024-09-19 09:56:21', 'uploads/1000015275.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,14 +88,6 @@ CREATE TABLE `user_profile` (
 -- Dumping data for table `user_profile`
 --
 
-INSERT INTO `user_profile` (`id`, `level`, `u_status`, `u_name`, `p_word`, `e_mail`, `user_img`) VALUES
-(1, 4, 0, 'MeowMYMY', '0656615598', 'yoo47000@gmail.com', 'https://myyoomi.carrd.co/assets/images/image01.png'),
-(6, 4, 0, 'Mochi', 'mochi2576', 'eakbadinchantawiparck@gmail.com', 'none'),
-(8, 1, 0, 'testuser', 'myyoomistudio@gmail.com', 'myyoomistudio@gmail.com', 'none'),
-(69, 4, 0, 'connonCH', '12345', 'connon12345@gmail.com', 'none');
-
--- --------------------------------------------------------
-
 --
 -- Table structure for table `web_setting`
 --
@@ -122,9 +105,6 @@ CREATE TABLE `web_setting` (
 --
 -- Dumping data for table `web_setting`
 --
-
-INSERT INTO `web_setting` (`id`, `web_name`, `web_domain`, `web_version`, `web_status`, `web_logo`, `Sell_Status`) VALUES
-(1, 'FurMY Thailand', 'http://watikorn.thddns.net:6556', '0.1', 1, 'logo.png', 1);
 
 --
 -- Indexes for dumped tables
