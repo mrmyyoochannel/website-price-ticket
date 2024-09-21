@@ -101,7 +101,7 @@ $conn->close();
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <div class="card-footer text-muted">
-  © 2024  : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
+  ™ 2024 : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
   </div>
 </body>
 </html>

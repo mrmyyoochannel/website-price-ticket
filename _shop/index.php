@@ -221,6 +221,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ไม่มีข้อมูลการซื้อบัตร
         </div>
     <?php } ?>
+  <div class="card-footer text-muted">
+  ™ 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -238,10 +241,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     });
 </script>
-
-<footer class="text-center mt-4">
-    <div class="text-muted">© 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a class="nav-link" href="https://myyoomi.carrd.co/">Create By MYYOOMI</a></div>
-</footer>
 
 </body>
 

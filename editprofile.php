@@ -67,7 +67,7 @@ $conn->close();
 <body>
     <div class="card-header"></div>
     <div class="text-center">
-  <img src="<?php echo $row['user_img']; ?>" class="rounded" alt="<?= $_SESSION['u_name']; ?>">
+  <img  height="400px" src="<?php echo $row['user_img']; ?>" class="rounded" alt="<?= $_SESSION['u_name']; ?>">
 	</div>
     <div class="container">
         <h2>Edit User Profile</h2>
@@ -94,7 +94,7 @@ $conn->close();
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <div class="card-footer text-muted">
-  © 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
+  ™ 2024 <?= $web_record['web_name']; ?> : Service 24 Hour Support <a href="https://myyoomi.carrd.co/">Create By MYYOOMI</a>
   </div>
 </body>
 </html>
