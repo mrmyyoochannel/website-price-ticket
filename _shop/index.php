@@ -172,7 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>ตรวจสอบรายการบัตรที่ซื้อ</h1>
         </div>
         <div class="card-body">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <form method="post" action="../_shop/">
                 <div class="mb-3">
                     <label for="user_email" class="form-label">Gmail:</label>
                     <input value="<?php echo $_SESSION['e_mail']; ?>" type="email" id="user_email" name="user_email" class="form-control" required>
