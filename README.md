@@ -1,4 +1,4 @@
-# MYYOOMI Website
+# website-price-ticket
 
 This website is created using **PHP**, **CSS**, **JavaScript**, and **SQL**.
 
