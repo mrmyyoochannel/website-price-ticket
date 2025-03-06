@@ -1,27 +1,27 @@
-MYYOOMI Website
-This website is created using PHP, CSS, JavaScript, and SQL.
+# MYYOOMI Website
 
-Dependencies
-Bootstrap
+This website is created using **PHP**, **CSS**, **JavaScript**, and **SQL**.
 
-SweetAlert2
+## Dependencies
 
-Features
-Users can:
+- [Bootstrap](https://getbootstrap.com/)
+- [SweetAlert2](https://sweetalert2.github.io/recipe-gallery/)
 
-Get tickets
+## Features
 
-Log in and out
+- Users can:
+  - Get tickets
+  - Log in and out
+  - Register
+  - Edit profiles
+  - And more...
 
-Register
+## Known Issues
 
-Edit profiles
+- There's a bug on the page `../_shop/buy_ticket.php?event_id=`.
 
-And more...
+For more information, check out [my profile](https://myyoomi.carrd.co/).
 
-Known Issues
-There's a bug on the page ../_shop/buy_ticket.php?event_id=.
+---
 
-For more information, check out my profile.
-
-I hope this helps! If there's anything more you need, feel free to ask.
+I hope this format works well for you on GitHub! If there's anything more you need, feel free to ask.
