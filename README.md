@@ -1,18 +1,27 @@
-<h3>Website This Create use Php,Css,javascript,sql</h3>
-<br>
-<a>------------------------------------------------</a>
-<br>
-I use This in website
-<br>
-https://getbootstrap.com/
-<br>
-https://sweetalert2.github.io/recipe-gallery/
-<br>
-<a>------------------------------------------------</a>
-<br>
-Some page is bug.... 
-(../_shop/buy_ticket.php?event_id=<idinsql>) Only
-<br>
-[myprofile](https://myyoomi.carrd.co/)
-<br>
-This Website Can get ticket login logout register editprofile .... and more
+MYYOOMI Website
+This website is created using PHP, CSS, JavaScript, and SQL.
+
+Dependencies
+Bootstrap
+
+SweetAlert2
+
+Features
+Users can:
+
+Get tickets
+
+Log in and out
+
+Register
+
+Edit profiles
+
+And more...
+
+Known Issues
+There's a bug on the page ../_shop/buy_ticket.php?event_id=.
+
+For more information, check out my profile.
+
+I hope this helps! If there's anything more you need, feel free to ask.
